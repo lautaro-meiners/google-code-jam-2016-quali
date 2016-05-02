@@ -15,12 +15,11 @@ abstract class CodeJam {
     abstract String resolver(String linea);
 
     void run(Path inputFile) throws Exception {
-        String[] tokens = inputFile.getFileName().toString().split("");
         Scanner nombreArchivoOut = new Scanner(System.in);
-        System.out.println("Nombre del archivo out");
+        System.out.println("Nombre del archivo out: ");
         String inputArchivoOut = nombreArchivoOut.nextLine();
         BufferedReader lector = new BufferedReader(new FileReader(inputFile.toFile()));
-        PrintWriter escritor = new PrintWriter(tokens[0] + inputArchivoOut + ".out.txt");
+        PrintWriter escritor = new PrintWriter(inputArchivoOut + ".out.txt");
         Scanner scanner = new Scanner(lector);
         int caseCount = Integer.parseInt(scanner.nextLine());
         for (int i = 1; i <= caseCount; i++) {
