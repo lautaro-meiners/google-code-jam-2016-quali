@@ -12,22 +12,22 @@ import java.util.Scanner;
  */
 abstract class CodeJam {
 
-    abstract String solve(String line);
+    abstract String resolver(String linea);
 
     void run(Path inputFile) throws Exception {
         String[] tokens = inputFile.getFileName().toString().split("");
-        BufferedReader reader = new BufferedReader(new FileReader(inputFile.toFile()));
-        PrintWriter writer = new PrintWriter(tokens[0] + ".out.txt");
-        Scanner scanner = new Scanner(reader);
+        BufferedReader lector = new BufferedReader(new FileReader(inputFile.toFile()));
+        PrintWriter escritor = new PrintWriter(tokens[0] + ".out.txt");
+        Scanner scanner = new Scanner(lector);
         int caseCount = Integer.parseInt(scanner.nextLine());
         for (int i = 1; i <= caseCount; i++) {
-            String solution = solve(scanner.nextLine());
-            writer.println("Case #" + i + ": " + solution);
-            System.out.println("Case #" + i + ": " + solution);
+            String solucion = resolver(scanner.nextLine());
+            escritor.println("Case #" + i + ": " + solucion);
+            System.out.println("Case #" + i + ": " + solucion);
         }
-        writer.close();
+        escritor.close();
         scanner.close();
-        reader.close();
+        lector.close();
     }
 
 }

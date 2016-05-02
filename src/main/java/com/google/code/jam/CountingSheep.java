@@ -11,8 +11,8 @@ import java.util.Scanner;
  */
 public class CountingSheep extends CodeJam {
 
-    String solve(String line) {
-        Integer numeroOriginal = Integer.parseInt(line);
+    String resolver(String linea) {
+        Integer numeroOriginal = Integer.parseInt(linea);
         Integer numeroActual = numeroOriginal;
 
         Integer [] digitos = {0,1,2,3,4,5,6,7,8,9};

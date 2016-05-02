@@ -8,9 +8,24 @@ import java.nio.file.Paths;
  */
 public class RevengeOfThePancakes extends CodeJam {
 
-    String solve(String line) {
-        return null;
-    }
+    String resolver(String linea) {
+        int  darVuelta = 0;
+        int i;
+
+        for (i = 0; i < linea.length() ; i++){
+            if (i + 1 < linea.length()) {
+                if (!(linea.charAt(i) == linea.charAt(i + 1))) {
+                    darVuelta++;
+                }
+            }else {
+                    if (linea.charAt(i) == '-'){
+                        darVuelta++;
+                    }
+                }
+            }
+
+        return String.valueOf(darVuelta);
+        }
 
     public static void main (String[] args) throws Exception {
         RevengeOfThePancakes revengeOfThePancakes = new RevengeOfThePancakes();
