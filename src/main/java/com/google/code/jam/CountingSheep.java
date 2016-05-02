@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 /**
  * Created by lautaro.meiners on 02/05/2016.
+ * Link a la pagina del ejercicio: https://code.google.com/codejam/contest/6254486/dashboard#s=p0
  */
 public class CountingSheep extends CodeJam {
 
